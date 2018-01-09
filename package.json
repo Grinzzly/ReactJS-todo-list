@@ -1,0 +1,10 @@
+{
+  "name": "react-js-todo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "harp server --port $PORT"
+  },
+  "devDependencies": {
+    "harp": "*"
+  }
+}
