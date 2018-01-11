@@ -4,6 +4,10 @@ import { observer } from 'mobx-react';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import Subheader from 'material-ui/Subheader';
+import IconButton from 'material-ui/IconButton';
+import IconMenu from 'material-ui/IconMenu';
+import MenuItem from 'material-ui/MenuItem';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 import Footer from '../components/Footer';
 import AddTodo from '../components/AddTodo';
@@ -51,11 +55,26 @@ const styles = {
 
 
 @observer class Primary extends React.Component {
+  state = {
+    valueSingle: '3',
+    valueMultiple: ['3', '5'],
+  };
+
+  handleChangeMultiple = (event, value) => {
+    this.setState({
+      valueMultiple: value,
+    });
+  };
+
+  switchStore = (numberOfCategory) => {
+    console.debug('switchTo ', numberOfCategory);
+  };
+
+  addCategory = () => {
+    console.debug('categoryAdded');
+  };
 
   render() {
-    const onClick = () => {
-      console.debug('ImplementCategoriesHere');
-    };
 
     return (
       <div style={styles.container}>
@@ -63,8 +82,19 @@ const styles = {
           <div style={styles.contentBody}>
             <AppBar
               title="ToDo list"
-              onTitleClick={onClick}
-              iconClassNameRight="muidocs-icon-navigation-expand-more"
+              iconElementLeft={
+                <IconMenu
+                  iconButtonElement={<IconButton><NavigationMenu /></IconButton>}
+                  onChange={this.handleChangeMultiple}
+                  value={this.state.valueMultiple}
+                  multiple={true}
+                >
+                  <MenuItem value="1" onClick={this.switchStore} primaryText="Category 1" />
+                  <MenuItem value="2" onClick={this.switchStore} primaryText="Category 2" />
+                  <MenuItem value="3" onClick={this.switchStore} primaryText="Category 3" />
+                  <MenuItem value="0" onClick={this.addCategory} primaryText="Add" />
+                </IconMenu>
+              }
             />
             <Subheader>Created with love by Grinzzly</Subheader>
             <TodoList store={this.props.store} style={styles.todoList} />
