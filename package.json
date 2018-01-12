@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "prod_build": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors",
-    "dev_build": "webpack --watch",
+    "dev_build": "webpack",
     "lint": "eslint src"
   },
   "keywords": [
