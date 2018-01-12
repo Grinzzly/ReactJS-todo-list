@@ -1,20 +1,20 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import {observer} from 'mobx-react';
 
 import FontIcon from 'material-ui/FontIcon';
 import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
-import { pinkA200, grey100, grey500, grey700, red200, red100, red500,
-          blueGrey800, blueGrey500, blueGrey900 } from 'material-ui/styles/colors';
+import { grey100 } from 'material-ui/styles/colors';
 
 const showAllIcon = <FontIcon className="material-icons">description</FontIcon>;
 const showActiveIcon = <FontIcon className="material-icons">flip_to_front</FontIcon>;
 const showCompletedIcon = <FontIcon className="material-icons">done_all</FontIcon>;
 
 
-@observer class Footer extends React.Component {
+@observer
+class Footer extends React.Component {
 
   render() {
-    const { store } = this.props;
+    const {store} = this.props;
 
     return (
       <BottomNavigation
@@ -31,22 +31,22 @@ const showCompletedIcon = <FontIcon className="material-icons">done_all</FontIco
           label="Show All"
           icon={showAllIcon}
           onTouchTap={() =>
-              store.visibilityFilter = 'SHOW_ALL'
-            }
+            store.visibilityFilter = 'SHOW_ALL'
+          }
         />
         <BottomNavigationItem
           label="Show Active"
           icon={showActiveIcon}
           onTouchTap={() =>
-              store.visibilityFilter = 'SHOW_ACTIVE'
-            }
+            store.visibilityFilter = 'SHOW_ACTIVE'
+          }
         />
         <BottomNavigationItem
           label="Show Completed"
           icon={showCompletedIcon}
           onTouchTap={() =>
-              store.visibilityFilter = 'SHOW_COMPLETED'
-            }
+            store.visibilityFilter = 'SHOW_COMPLETED'
+          }
         />
       </BottomNavigation>
     );

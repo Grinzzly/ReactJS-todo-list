@@ -1,20 +1,3 @@
-/**
-
-  Name: /src/TodoNode.js
-
-  Description: TodoNode is the fundamental building block of the tree
-  structure, including the root. It has actions for most of the important
-  manipulations that need to be done -- deleting, indeting, etc.
-
-  TODO:
-
-  Copyright (c) 2017-present Justin Haaheim
-
-  This file is subject to the terms and conditions defined in
-  file 'LICENSE', which is part of this source code package.
-
-********************************************** */
-
 import { observable, computed, action, toJS } from 'mobx';
 
 let nextTodoId = 0;

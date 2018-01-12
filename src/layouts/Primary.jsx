@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import {observer} from 'mobx-react';
 
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
@@ -34,9 +34,7 @@ const styles = {
   contentBody: {
     minHeight: '510px',
   },
-  todoList: {
-
-  },
+  todoList: {},
   footerArea: {
     padding: 0,
     bottom: '0px',
@@ -54,7 +52,8 @@ const styles = {
 };
 
 
-@observer class Primary extends React.Component {
+@observer
+class Primary extends React.Component {
   state = {
     valueSingle: '3',
     valueMultiple: ['3', '5'],
@@ -66,8 +65,8 @@ const styles = {
     });
   };
 
-  switchStore = (numberOfCategory) => {
-    console.debug('switchTo ', numberOfCategory);
+  switchStore = (category) => {
+    console.debug('switchTo ', category);
   };
 
   addCategory = () => {
@@ -84,26 +83,26 @@ const styles = {
               title="ToDo list"
               iconElementLeft={
                 <IconMenu
-                  iconButtonElement={<IconButton><NavigationMenu /></IconButton>}
+                  iconButtonElement={<IconButton><NavigationMenu/></IconButton>}
                   onChange={this.handleChangeMultiple}
                   value={this.state.valueMultiple}
                   multiple={true}
                 >
-                  <MenuItem value="1" onClick={this.switchStore} primaryText="Category 1" />
-                  <MenuItem value="2" onClick={this.switchStore} primaryText="Category 2" />
-                  <MenuItem value="3" onClick={this.switchStore} primaryText="Category 3" />
-                  <MenuItem value="0" onClick={this.addCategory} primaryText="Add" />
+                  <MenuItem value="1" onClick={this.switchStore} primaryText="Category 1"/>
+                  <MenuItem value="2" onClick={this.switchStore} primaryText="Category 2"/>
+                  <MenuItem value="3" onClick={this.switchStore} primaryText="Category 3"/>
+                  <MenuItem value="0" onClick={this.addCategory} primaryText="Add"/>
                 </IconMenu>
               }
             />
             <Subheader>Created with love by Grinzzly</Subheader>
-            <TodoList store={this.props.store} style={styles.todoList} />
+            <TodoList store={this.props.store} style={styles.todoList}/>
           </div>
           <div style={styles.footerArea}>
             <div style={styles.addButton}>
-              <AddTodo store={this.props.store} />
+              <AddTodo store={this.props.store}/>
             </div>
-            <Footer store={this.props.store} />
+            <Footer store={this.props.store}/>
           </div>
         </Paper>
       </div>

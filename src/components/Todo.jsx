@@ -7,15 +7,14 @@ import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import { ListItem } from 'material-ui/List';
 
-
 const iconStyles = {
   margin: 5,
 };
 
 const INDENT_SIZE = 25;
 
-
-@observer class Todo extends React.Component {
+@observer
+class Todo extends React.Component {
 
   componentDidMount() {
     this.textFieldRef.focus();
@@ -95,7 +94,7 @@ const INDENT_SIZE = 25;
           }
           break;
         case 40:  // down arrow
-          if (e.metaKey) {  // Cmd+up / Meta+up
+          if (e.metaKey) {  // Meta+up
             e.preventDefault();
             if (e.type === 'keydown') {
               moveDown();
@@ -141,7 +140,9 @@ const INDENT_SIZE = 25;
           id={`${node.id}textfield`}
           fullWidth={false}
           value={text}
-          ref={(input) => { this.textFieldRef = input; }}
+          ref={(input) => {
+            this.textFieldRef = input;
+          }}
           disabled={completed}
           onChange={(e, newValue) => update(newValue)}
           onKeyDown={handleKeyPress.bind(this)}
@@ -159,7 +160,7 @@ const INDENT_SIZE = 25;
           }}
           tooltip="Delete Todo"
         >
-          <FontIcon className="material-icons" style={iconStyles} >delete</FontIcon>
+          <FontIcon className="material-icons" style={iconStyles}>delete</FontIcon>
         </IconButton>
       </ListItem>
     );

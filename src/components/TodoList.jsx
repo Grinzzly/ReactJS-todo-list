@@ -1,12 +1,13 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import {observer} from 'mobx-react';
 
-import { List } from 'material-ui/List';
+import {List} from 'material-ui/List';
 
 import Todo from './Todo';
 
 
-@observer class TodoList extends React.Component {
+@observer
+class TodoList extends React.Component {
 
   componentDidMount() {
     if (this.props.store.demoMode) {
@@ -26,17 +27,24 @@ import Todo from './Todo';
     const { addTodo } = this.props.store;
 
     setTimeouts([
-      () => { addTodo('Welcome to this nested todo list!'); },
-      () => { addTodo('You can add a new item by pressing enter.').indent(); },
+      () => {
+        addTodo('Welcome to this nested todo list!');
+      },
+      () => {
+        addTodo('You can add a new item by pressing enter.').indent();
+      },
       () => {
         const n = addTodo('Move up/down using the arrows. Indent with tab/shift+tab.');
         n.indent();
         n.indent();
       },
-      () => { addTodo('Move an item up/down with meta+up/meta+down.').indent(); },
-      () => { addTodo('Delete an empty line with backspace, or click the trashcan.'); },
-    ],
-    1000);
+      () => {
+        addTodo('Move an item up/down with meta+up/meta+down.').indent();
+      },
+      () => {
+        addTodo('Delete an empty line with backspace, or click the trashcan.');
+      },
+    ], 1000);
   }
 
 
