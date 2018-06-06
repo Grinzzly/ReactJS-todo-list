@@ -19,7 +19,7 @@
 **ToDo ReactJS List** is a [React](https://facebook.github.io/react) -based task list (or "todo list")
 prototype written in JavaScript (ES6+) built using the [Material-UI](http://www.material-ui.com/) React component library.
 
-# Install / Run in dev mode
+## Install / Run in dev mode
 
 From the root of the project directory:
 
