@@ -1,6 +1,6 @@
 {
   "name": "todo-react-js-list",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "A highly functional nested task list prototype built with React + Redux and Material-ui",
   "homepage": "",
   "author": {
