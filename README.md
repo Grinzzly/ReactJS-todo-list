@@ -1,7 +1,23 @@
-ToDo ReactJS List
-=====================
+<h1 align="center">ToDo ReactJS List</h1>
 
-**ToDo ReactJS List** is a [React](https://facebook.github.io/react) -based task list (or "todo list") prototype written in JavaScript (ES6+) built using the [Material-UI](http://www.material-ui.com/) React component library.
+<div align="center">
+  <sub>The little ToDo that could to Do. Written by
+  <a href="https://github.com/Grinzzly">Grinzzly</a>
+  </a>
+  <br>
+  <br>
+  <a href="https://github.com/airbnb/javascript">
+        <img src="https://img.shields.io/badge/Code%20Style-Airbnb-red.svg"
+             alt="Airbnb">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/60%25%20of%20the%20time-works%20every%20time-blue.svg" alt="Quality">
+</div>
+
+## About
+
+**ToDo ReactJS List** is a [React](https://facebook.github.io/react) -based task list (or "todo list")
+prototype written in JavaScript (ES6+) built using the [Material-UI](http://www.material-ui.com/) React component library.
 
 # Install / Run in dev mode
 
@@ -23,7 +39,7 @@ open http://localhost:3000
 
 ## Style
 
-This project uses the [Airbnb Javascript + React Style Guide](https://github.com/airbnb/javascript) for coding style, and is configured for linting using ESLint. 
+This project uses the [Airbnb Javascript + React Style Guide](https://github.com/airbnb/javascript) for coding style, and is configured for linting using ESLint.
 
 ## Project Structure
 
@@ -36,6 +52,6 @@ For a project of this scale one of the primary considerations was keeping the de
   - Since the user interactions are almost all based on clicking, typing or keyboard shortcuts that pertain to one particular todo node, I put the main user interaction logic in `Todo.jsx`, which has worked great.
 - **Layouts** - `src/layouts/Primary.jsx` is currently the sole layout (alternatively called a screen/scene/view depending on who you talk to) for the app, but this structure allows for other layouts in the future like menus/drawers, settings screens, etc.
 
-# License
+## License
 
 [MIT](./LICENSE)

@@ -1,5 +1,5 @@
 import React from 'react';
-import {observer} from 'mobx-react';
+import { observer } from 'mobx-react';
 
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
