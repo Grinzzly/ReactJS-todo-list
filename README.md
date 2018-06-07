@@ -52,6 +52,13 @@ For a project of this scale one of the primary considerations was keeping the de
   - Since the user interactions are almost all based on clicking, typing or keyboard shortcuts that pertain to one particular todo node, I put the main user interaction logic in `Todo.jsx`, which has worked great.
 - **Layouts** - `src/layouts/Primary.jsx` is currently the sole layout (alternatively called a screen/scene/view depending on who you talk to) for the app, but this structure allows for other layouts in the future like menus/drawers, settings screens, etc.
 
+## Technology used
+* __ReactJS__
+* __MobX__
+* __Material-UI__
+* __Node.js__
+* __Webpack__
+
 ## License
 
 [MIT](./LICENSE)

@@ -3,7 +3,7 @@ Reference Information
 
 *This document contains notes and design plans for the project, as well as references to tools, sites, commands, etc. that pertain to the project. Whereas the [README](./README.md) is intended for public consumption, this will likely only make sense to other developers familiar with the project.*
 
-# Building
+## Building
 
 To build for production, run:
 
@@ -15,9 +15,9 @@ There's currently still a bit more to do after that's done, including putting th
 
 TODO: write up a configuration to build/publish the project.
 
-# Project Plan
+## Project Plan
 
-## Adding hierarchy to the task list
+### Adding hierarchy to the task list
 
 Data structure: an array of Todo objects, each of which has its own `childNodes` array (avoiding `children` for potential react name conflicts).
 
@@ -31,7 +31,7 @@ Transformations needed:
 - `indent element` - takes the current node (and all of its children) and adds it to the end of the childNodes array of the previous element in the element's current position and depth.
 - `decrease indent` - moves the current node to the parent node's array, directly following the parent.
 
-## Creating controls for the task list
+### Creating controls for the task list
 
 Ideal controls would be keyboard based:
 - Cmd+up and Cmd+down to move the element up/down
@@ -39,13 +39,13 @@ Ideal controls would be keyboard based:
 - enter to add element
 - backspace on an empty item to delete, or the trashcan icon, or perhaps Cmd+delete
 
-# Tools and guides
+## Tools and guides
 
-## Redux
+### Redux
 
 Tutorial source: http://redux.js.org/docs/basics/ExampleTodoList.html
 
-## Yarn
+### Yarn
 These were the commands for the create-react-app boilerplate:
 
 ```
